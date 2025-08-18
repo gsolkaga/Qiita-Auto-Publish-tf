@@ -12,4 +12,4 @@ cronで日時を指定し、記事内容を事前に用意してAPIにPOSTする
 
 ## 呼び出し方のsample
 
-https://github.com/gsolkaga/Qiita-Auto-Publish-tf/sample.tf
+https://github.com/gsolkaga/Qiita-Auto-Publish-tf/blob/master/sample.tf
