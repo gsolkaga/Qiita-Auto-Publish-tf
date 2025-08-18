@@ -36,4 +36,12 @@ variable "article" {
     private_flag = optional(bool, true)
     organization = optional(string, null)
   })
+  validation {
+    condition     = !(var.article.private_flag && var.article.organization != null)
+    error_message = "限定公開記事と組織用記事は同時に指定できません"
+  }
+  validation {
+    condition     = alltrue([for i in var.article.tags : !strcontains(i, " ")])
+    error_message = "tagsに空白文字を設定できません"
+  }
 }
